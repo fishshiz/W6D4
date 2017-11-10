@@ -65,73 +65,9 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-const Router = __webpack_require__(1);
-
-document.addEventListener("DOMContentLoaded", function(event) {
-
-  let sidebar = document.querySelector(".sidebar-nav");
-  
-  sidebar.addEventListener("click", function(e) {
-    let newLocation = e.target.innerText.toLowerCase();
-    window.location.hash = newLocation;
-  });
-  
-  let addContentHere = document.querySelector('.content');
-  let routeThings = new Router(addContentHere);
-  
-  routeThings.start();
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-});
-
-/***/ }),
-/* 1 */
 /***/ (function(module, exports) {
 
-class Router{
-  constructor(node){
-    this.node = node;
-    this.render = this.render.bind(this);
-  }
-  
-  start(){
-    this.render();
-    window.addEventListener("hashchange", this.render);
-  }
-  
-  render(){
-    this.node.innerHTML = "";
-    let content = this.activeRoute();
-    let newNode = document.createElement('p');
-    newNode.innerHTML = content;
-    this.node.appendChild(newNode);
-  }
-  
-  activeRoute(){
-    let activeLocation = window.location.hash;
-    return activeLocation.slice(1);
-  }
-}
-
-module.exports = Router;
+throw new Error("Module parse failed: Unexpected token (5:7)\nYou may need an appropriate loader to handle this file type.\n| \n| const Routes = class Routes{\n|   inbox: Inbox\n| }\n| ");
 
 /***/ })
 /******/ ]);

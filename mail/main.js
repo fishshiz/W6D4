@@ -1,4 +1,9 @@
 const Router = require('./router');
+const Inbox = require('./Inbox');
+
+const Routes = class Routes{
+  inbox: Inbox
+}
 
 document.addEventListener("DOMContentLoaded", function(event) {
 
@@ -10,25 +15,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
   
   let addContentHere = document.querySelector('.content');
-  let routeThings = new Router(addContentHere);
+  let routeThings = new Router(addContentHere, Routes);
   
   routeThings.start();
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
 });
+
